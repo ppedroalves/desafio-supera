@@ -1,11 +1,11 @@
 package org.supera.desafio2.domain;
 
-public class ValorMonetario {
+public class Dinheiro {
     private String tipo;
     private Double valor;
     private Long quantidade;
 
-    public ValorMonetario(String tipo, Double valor){
+    public Dinheiro(String tipo, Double valor){
         this.tipo = tipo;
         this.valor = valor;
         this.quantidade = 0L;
