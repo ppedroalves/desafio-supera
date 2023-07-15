@@ -10,8 +10,8 @@ import java.util.Scanner;
 public class Desafio2 {
     public static void main(String[] args) {
         List<Dinheiro> valores = inicializarNotasEMoedas();
-        Scanner scanner = new Scanner(System.in);
-        Double value = scanner.nextDouble();
+
+        Double value = lerValorPontoFlutuante();
         Double currentValue = 0.0;
         for (Dinheiro v : valores) {
             while((currentValue + v.getValor()) <= value){
@@ -51,6 +51,13 @@ public class Desafio2 {
                 new Dinheiro("moeda", 0.10),
                 new Dinheiro("moeda", 0.05),
                 new Dinheiro("moeda", 0.01));
+    }
+
+    private static Double lerValorPontoFlutuante(){
+        Scanner scanner = new Scanner(System.in);
+        String input = scanner.nextLine();
+        return Double.parseDouble(input);
+
     }
 
 
